@@ -264,7 +264,7 @@ export default function ManualRegistrationPage() {
   };
 
   const handleCancel = () => {
-    navigate("/register");
+    navigate("/RegisterPage");
   };
 
   const handleBackToStep1 = () => {
