@@ -18,7 +18,14 @@ import {
   DialogTitle,
 } from "../components/ui/dialog";
 import { Alert, AlertDescription } from "../components/ui/alert";
-import { ArrowLeft, Mail, CheckCircle2, XCircle, Loader2, ExternalLink } from "lucide-react";
+import {
+  ArrowLeft,
+  Mail,
+  CheckCircle2,
+  XCircle,
+  Loader2,
+  ExternalLink,
+} from "lucide-react";
 
 // API base URL - same as registration
 const API_BASE_URL =
@@ -155,7 +162,6 @@ export default function VerifyPage() {
       } else {
         setIsSuccess(true);
       }
-
     } catch (error: any) {
       console.error("Verification error:", error);
       setVerificationError(
@@ -170,30 +176,29 @@ export default function VerifyPage() {
   const redirectToLMS = async (token: string) => {
     try {
       setIsRedirectingToLMS(true);
-      
+
       const response = await fetch(`${API_BASE_URL}/auth/sync-to-lms`, {
-        method: 'POST',
+        method: "POST",
         headers: {
-          'Authorization': `Bearer ${token}`,
-          'Content-Type': 'application/json',
+          Authorization: `Bearer ${token}`,
+          "Content-Type": "application/json",
         },
       });
 
       const result = await response.json();
 
       if (!response.ok) {
-        throw new Error(result.error || 'Failed to connect to LMS');
+        throw new Error(result.error || "Failed to connect to LMS");
       }
 
       // Redirect to LMS
       if (result.lmsLoginUrl) {
         window.location.href = result.lmsLoginUrl;
       } else {
-        throw new Error('No LMS URL received');
+        throw new Error("No LMS URL received");
       }
-
     } catch (error: any) {
-      console.error('LMS redirect error:', error);
+      console.error("LMS redirect error:", error);
       // Fallback: show success page with manual LMS button
       setIsSuccess(true);
       setIsRedirectingToLMS(false);
@@ -201,7 +206,7 @@ export default function VerifyPage() {
   };
 
   const handleExplorePlatform = async () => {
-    const token = localStorage.getItem('authToken');
+    const token = localStorage.getItem("authToken");
     if (!token) {
       navigate("/");
       return;
@@ -209,31 +214,30 @@ export default function VerifyPage() {
 
     try {
       setIsRedirectingToLMS(true);
-      
+
       const response = await fetch(`${API_BASE_URL}/auth/sync-to-lms`, {
-        method: 'POST',
+        method: "POST",
         headers: {
-          'Authorization': `Bearer ${token}`,
-          'Content-Type': 'application/json',
+          Authorization: `Bearer ${token}`,
+          "Content-Type": "application/json",
         },
       });
 
       const result = await response.json();
 
       if (!response.ok) {
-        throw new Error(result.error || 'Failed to connect to LMS');
+        throw new Error(result.error || "Failed to connect to LMS");
       }
 
       // Redirect to LMS
       if (result.lmsLoginUrl) {
         window.location.href = result.lmsLoginUrl;
       } else {
-        throw new Error('No LMS URL received');
+        throw new Error("No LMS URL received");
       }
-
     } catch (error: any) {
-      console.error('LMS redirect error:', error);
-      alert('Failed to connect to LMS. Please try again.');
+      console.error("LMS redirect error:", error);
+      alert("Failed to connect to LMS. Please try again.");
       setIsRedirectingToLMS(false);
     }
   };
@@ -321,7 +325,7 @@ export default function VerifyPage() {
                         </>
                       )}
                     </Button>
-                    <Button 
+                    <Button
                       onClick={handleCompleteProfile}
                       variant="outline"
                       className="w-full border-2 border-gray-300 text-gray-700 hover:bg-gray-50 rounded-lg"
@@ -489,7 +493,7 @@ export default function VerifyPage() {
               <div className="mt-6 text-center text-sm">
                 <span className="text-gray-600">New to SCDP? </span>
                 <Link
-                  to="/register"
+                  to="/RegisterPage"
                   className="text-green-600 hover:text-green-700 hover:underline font-medium"
                 >
                   Join our community
