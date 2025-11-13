@@ -22,14 +22,14 @@ const Navbar = () => {
   }, [isOpen]);
 
   const navLinks = [
-    { path: "/", label: "Home" },
+    { path: "/home", label: "Home" },
     { path: "/about", label: "About" },
     { path: "/framework", label: "Framework" },
     { path: "/services", label: "Services" },
     { path: "/projects", label: "Projects" },
     { path: "/stakeholders", label: "Stakeholders" },
     { path: "/impact", label: "Impact" },
-    { path: "/digital-skills", label: "Digital Skills" },
+    { path: "/", label: "Digital Skills" },
     { path: "/contact", label: "Contact" },
   ];
 

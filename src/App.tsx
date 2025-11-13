@@ -26,6 +26,7 @@ function App() {
         <main className="flex-grow">
           <Routes>
             <Route path="/" element={<DigitalSkills/>} />
+            <Route path="/home" element={<Home/>} />
             <Route path="/ManualRegistrationPage" element={<ManualRegistrationPage />} />
             <Route path="/complete-profile" element={<ProfileCompletionPage />} />
           <Route path="/oauth-callback" element={<OAuthCallbackPage />} />
