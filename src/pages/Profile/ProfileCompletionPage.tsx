@@ -522,7 +522,7 @@ export default function ProfileCompletionPage() {
 
                     <div className="space-y-2">
                       <Label htmlFor="race" className="text-base font-medium text-gray-700">
-                        Race (Optional)
+                        Race 
                       </Label>
                       <Controller
                         name="race"
@@ -546,7 +546,7 @@ export default function ProfileCompletionPage() {
 
                     <div className="space-y-2">
                       <Label htmlFor="idPassport" className="text-base font-medium text-gray-700">
-                        South African ID / Passport Number (Optional)
+                        South African ID / Passport Number 
                       </Label>
                       <Controller
                         name="idPassport"
@@ -749,7 +749,7 @@ export default function ProfileCompletionPage() {
 
                     <div className="space-y-2">
                       <Label htmlFor="salaryRange" className="text-base font-medium text-gray-700">
-                        Monthly Income Range (Optional)
+                        Monthly Income Range 
                       </Label>
                       <Controller
                         name="salaryRange"
