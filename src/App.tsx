@@ -39,7 +39,6 @@ function App() {
             <Route path="/stakeholders" element={<Stakeholders />} />
             <Route path="/verify" element={<VerifyPage />} />
             <Route path="/impact" element={<Impact />} />
-            <Route path="/digital-skills" element={<DigitalSkills />} />
             <Route path="/contact" element={<Contact />} />
           </Routes>
         </main>
