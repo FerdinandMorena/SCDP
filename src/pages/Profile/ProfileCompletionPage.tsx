@@ -85,7 +85,7 @@ const AddressAutocomplete = ({ value, onChange, onBlur, error }: AddressAutocomp
   const inputRef = useRef<HTMLInputElement>(null);
   const debounceRef = useRef<NodeJS.Timeout>();
 
-  // Google Places API Key 
+  // Google Places API Key it needs to be paid for so for now ha.a its not working
   const GOOGLE_PLACES_API_KEY = 'YOUR_GOOGLE_PLACES_API_KEY';
 
   const fetchAddressSuggestions = async (input: string): Promise<PlacePrediction[]> => {
@@ -233,7 +233,7 @@ const AddressAutocomplete = ({ value, onChange, onBlur, error }: AddressAutocomp
               <div
                 key={suggestion.place_id}
                 className="px-4 py-3 cursor-pointer hover:bg-gray-50 transition-colors border-b last:border-b-0"
-                onMouseDown={(e) => e.preventDefault()} // Prevent input blur
+                onMouseDown={(e) => e.preventDefault()} 
                 onClick={() => handleSuggestionSelect(suggestion)}
               >
                 <div className="flex items-start gap-2">
@@ -336,7 +336,7 @@ export default function ProfileCompletionPage() {
         dateOfBirth: data.dateOfBirth,
         educationLevel: data.educationLevel,
         province: data.province,
-        district: data.district, // This maps to 'region' in database
+        district: data.district, 
         municipality: data.municipality,
         race: data.race || null,
         idPassport: data.idPassport || null,
@@ -522,7 +522,7 @@ export default function ProfileCompletionPage() {
 
                     <div className="space-y-2">
                       <Label htmlFor="race" className="text-base font-medium text-gray-700">
-                        Race (Optional)
+                        Race 
                       </Label>
                       <Controller
                         name="race"
@@ -546,7 +546,7 @@ export default function ProfileCompletionPage() {
 
                     <div className="space-y-2">
                       <Label htmlFor="idPassport" className="text-base font-medium text-gray-700">
-                        South African ID / Passport Number (Optional)
+                        South African ID / Passport Number 
                       </Label>
                       <Controller
                         name="idPassport"
@@ -749,7 +749,7 @@ export default function ProfileCompletionPage() {
 
                     <div className="space-y-2">
                       <Label htmlFor="salaryRange" className="text-base font-medium text-gray-700">
-                        Monthly Income Range (Optional)
+                        Monthly Income Range 
                       </Label>
                       <Controller
                         name="salaryRange"

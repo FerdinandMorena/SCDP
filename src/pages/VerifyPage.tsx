@@ -97,7 +97,7 @@ export default function VerifyPage() {
         // Check if email is already verified
         else if (result.code === "ALREADY_VERIFIED") {
           setIsAlreadyVerified(true);
-          setIsSuccess(true); // Take them directly to success
+          setIsSuccess(true); 
           return;
         } else {
           throw new Error(result.error || "Failed to send verification code");
@@ -172,7 +172,7 @@ export default function VerifyPage() {
     }
   };
 
-  // New function to redirect to LMS
+  // this is the  LMS function to redirect 
   const redirectToLMS = async (token: string) => {
     try {
       setIsRedirectingToLMS(true);
