@@ -151,7 +151,7 @@ export default function OAuthCallbackPage() {
   }, [searchParams, navigate]);
 
   const handleRetry = () => {
-    navigate('/register');
+    navigate('/RegisterPage');
   };
 
   const handleGoHome = () => {
