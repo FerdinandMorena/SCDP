@@ -70,6 +70,7 @@ const About = () => {
                 teaching skills—we're building futures and transforming entire
                 communities.
               </p>
+              <img src="/NewLogo.jpg" alt="" />
             </motion.div>
 
             <motion.div

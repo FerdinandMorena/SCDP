@@ -17,7 +17,7 @@ const Footer = () => {
           <div>
             <div className="flex items-center space-x-2 mb-4">
               <img
-                src="/logo2-bg.png"
+                src="/NewLogbg.png"
                 alt="SCDP Logo"
                 className="h-20 w-auto object-contain"
               />

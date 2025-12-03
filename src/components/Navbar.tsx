@@ -12,12 +12,12 @@ const Navbar = () => {
 
   useEffect(() => {
     if (isOpen) {
-      document.body.style.overflow = 'hidden';
+      document.body.style.overflow = "hidden";
     } else {
-      document.body.style.overflow = 'unset';
+      document.body.style.overflow = "unset";
     }
     return () => {
-      document.body.style.overflow = 'unset';
+      document.body.style.overflow = "unset";
     };
   }, [isOpen]);
 
@@ -42,7 +42,7 @@ const Navbar = () => {
           <div className="flex items-center">
             <Link to="/" className="flex items-center space-x-3 group">
               <img
-                src="/logo2.png"
+                src="/NewLogo.jpg"
                 alt="SCDP Logo"
                 className="h-20 w-auto object-contain transition-transform duration-300 group-hover:scale-110"
               />
@@ -110,26 +110,26 @@ const Navbar = () => {
 
           {/* Menu Items */}
           <div className="space-y-2">
-          {navLinks.map((link, index) => (
-            <Link
-              key={link.path}
-              to={link.path}
-              onClick={() => {
-                setIsOpen(false);
-                window.scrollTo({ top: 0, behavior: "smooth" });
-              }}
-              className={`block px-4 py-3 rounded-lg text-base font-medium transition-all duration-300 transform hover:translate-x-2 ${
-                isActive(link.path)
-                  ? "bg-green-600 text-white shadow-md"
-                  : "text-gray-700 hover:bg-green-50 hover:text-green-600"
-              }`}
-              style={{
-                transitionDelay: isOpen ? `${index * 50}ms` : "0ms",
-              }}
-            >
-              {link.label}
-            </Link>
-          ))}
+            {navLinks.map((link, index) => (
+              <Link
+                key={link.path}
+                to={link.path}
+                onClick={() => {
+                  setIsOpen(false);
+                  window.scrollTo({ top: 0, behavior: "smooth" });
+                }}
+                className={`block px-4 py-3 rounded-lg text-base font-medium transition-all duration-300 transform hover:translate-x-2 ${
+                  isActive(link.path)
+                    ? "bg-green-600 text-white shadow-md"
+                    : "text-gray-700 hover:bg-green-50 hover:text-green-600"
+                }`}
+                style={{
+                  transitionDelay: isOpen ? `${index * 50}ms` : "0ms",
+                }}
+              >
+                {link.label}
+              </Link>
+            ))}
           </div>
         </div>
       </div>
