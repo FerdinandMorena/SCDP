@@ -217,7 +217,7 @@ const Services = () => {
               <Link to="/contact" className="bg-green-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-green-700 transition-all transform hover:scale-105 inline-flex items-center justify-center">
                 Contact Us
               </Link>
-              <Link to="/digital-skills" className="bg-white text-green-600 border-2 border-green-600 px-8 py-3 rounded-lg font-semibold hover:bg-green-50 transition-all transform hover:scale-105 inline-flex items-center justify-center">
+              <Link to="/" className="bg-white text-green-600 border-2 border-green-600 px-8 py-3 rounded-lg font-semibold hover:bg-green-50 transition-all transform hover:scale-105 inline-flex items-center justify-center">
                 View Courses
               </Link>
             </div>
